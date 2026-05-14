@@ -1,0 +1,519 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>APEX Motors — Luxury Car Showroom</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">APEX<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#featured">Inventory</a></li>
+    <li><a href="#brands">Brands</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#testi">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Book Test Drive</a></li>
+  </ul>
+  <button class="hamburger" id="hbg" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mob-drawer" id="mobDrawer">
+  <ul>
+    <li><a href="#featured" onclick="closeMob()">Inventory</a></li>
+    <li><a href="#brands" onclick="closeMob()">Brands</a></li>
+    <li><a href="#why" onclick="closeMob()">Why Us</a></li>
+    <li><a href="#testi" onclick="closeMob()">Reviews</a></li>
+    <li><a href="#contact" onclick="closeMob()">Book Test Drive</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide active">
+      <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1600&q=80" alt="Luxury Car"/>
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=80" alt="Sports Car"/>
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1600&q=80" alt="Premium Car"/>
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-label">Premium Automobiles Since 1998</div>
+    <h1>Drive The<br><em>Extraordinary</em></h1>
+    <p>Discover an unparalleled selection of the world's finest vehicles. From raw performance to refined luxury — your perfect car awaits.</p>
+    <div class="hero-btns">
+      <a href="#featured" class="btn-red">View Inventory</a>
+      <a href="#contact" class="btn-outline">Book Test Drive</a>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots">
+    <div class="hero-dot active" onclick="goSlide(0)"></div>
+    <div class="hero-dot" onclick="goSlide(1)"></div>
+    <div class="hero-dot" onclick="goSlide(2)"></div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Luxury Fleet</span><span class="sep"> — </span>
+    <span>Certified Pre-Owned</span><span class="sep"> — </span>
+    <span>0% Finance Available</span><span class="sep"> — </span>
+    <span>Trade-In Welcome</span><span class="sep"> — </span>
+    <span>5-Star Service</span><span class="sep"> — </span>
+    <span>Free Delivery</span><span class="sep"> — </span>
+    <span>Luxury Fleet</span><span class="sep"> — </span>
+    <span>Certified Pre-Owned</span><span class="sep"> — </span>
+    <span>0% Finance Available</span><span class="sep"> — </span>
+    <span>Trade-In Welcome</span><span class="sep"> — </span>
+    <span>5-Star Service</span><span class="sep"> — </span>
+    <span>Free Delivery</span><span class="sep"> — </span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-num"><span id="s1">0</span><span>+</span></div>
+    <div class="stat-lbl">Vehicles in Stock</div>
+  </div>
+  <div class="stat-item reveal d1">
+    <div class="stat-num"><span id="s2">0</span><span>K+</span></div>
+    <div class="stat-lbl">Happy Customers</div>
+  </div>
+  <div class="stat-item reveal d2">
+    <div class="stat-num"><span id="s3">0</span><span>+</span></div>
+    <div class="stat-lbl">Premium Brands</div>
+  </div>
+  <div class="stat-item reveal d3">
+    <div class="stat-num"><span id="s4">0</span></div>
+    <div class="stat-lbl">Years of Excellence</div>
+  </div>
+</div>
+
+<!-- FEATURED INVENTORY -->
+<section class="featured" id="featured">
+  <div class="featured-hdr reveal">
+    <div>
+      <div class="sec-label">Our Inventory</div>
+      <div class="sec-h2">Featured <em>Vehicles</em></div>
+    </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-red">View All</a>
+    </div>
+  </div>
+  <div class="carousel-wrap">
+    <div class="carousel-track" id="carTrack">
+
+      <div class="car-card reveal">
+        <div class="car-card-img">
+          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80" alt="Porsche 911"/>
+          <div class="car-badge">New Arrival</div>
+        </div>
+        <div class="car-card-body">
+          <div class="car-tag">Sports</div>
+          <div class="car-name">Porsche 911 GT3</div>
+          <div class="car-desc">Pure engineering artistry. 502 bhp, rear-wheel drive, naturally aspirated perfection.</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="spec-val">502</span><span class="spec-key">BHP</span></div>
+            <div class="car-spec"><span class="spec-val">3.4s</span><span class="spec-key">0-100 km/h</span></div>
+            <div class="car-spec"><span class="spec-val">318</span><span class="spec-key">km/h Top</span></div>
+          </div>
+          <div class="car-foot">
+            <div class="car-price">$189,000</div>
+            <button class="car-btn">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card reveal d1">
+        <div class="car-card-img">
+          <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&q=80" alt="Ferrari"/>
+          <div class="car-badge">Exclusive</div>
+        </div>
+        <div class="car-card-body">
+          <div class="car-tag">Supercar</div>
+          <div class="car-name">Ferrari Roma Spider</div>
+          <div class="car-desc">La dolce vita reimagined. Twin-turbo V8 convertible elegance with Italian soul.</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="spec-val">620</span><span class="spec-key">BHP</span></div>
+            <div class="car-spec"><span class="spec-val">3.4s</span><span class="spec-key">0-100 km/h</span></div>
+            <div class="car-spec"><span class="spec-val">320</span><span class="spec-key">km/h Top</span></div>
+          </div>
+          <div class="car-foot">
+            <div class="car-price">$265,000</div>
+            <button class="car-btn">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card reveal d2">
+        <div class="car-card-img">
+          <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80" alt="Lamborghini"/>
+          <div class="car-badge">Limited</div>
+        </div>
+        <div class="car-card-body">
+          <div class="car-tag">Hypercar</div>
+          <div class="car-name">Lamborghini Huracan</div>
+          <div class="car-desc">640 horses, all-wheel drive, and a soundtrack that stops traffic. Born to dominate.</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="spec-val">640</span><span class="spec-key">BHP</span></div>
+            <div class="car-spec"><span class="spec-val">2.9s</span><span class="spec-key">0-100 km/h</span></div>
+            <div class="car-spec"><span class="spec-val">325</span><span class="spec-key">km/h Top</span></div>
+          </div>
+          <div class="car-foot">
+            <div class="car-price">$320,000</div>
+            <button class="car-btn">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-card-img">
+          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80" alt="BMW M5"/>
+          <div class="car-badge">In Stock</div>
+        </div>
+        <div class="car-card-body">
+          <div class="car-tag">Luxury Sedan</div>
+          <div class="car-name">BMW M5 Competition</div>
+          <div class="car-desc">The four-door supercar. 627 bhp, xDrive all-wheel, and M TwinPower turbo V8.</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="spec-val">627</span><span class="spec-key">BHP</span></div>
+            <div class="car-spec"><span class="spec-val">3.3s</span><span class="spec-key">0-100 km/h</span></div>
+            <div class="car-spec"><span class="spec-val">305</span><span class="spec-key">km/h Top</span></div>
+          </div>
+          <div class="car-foot">
+            <div class="car-price">$142,000</div>
+            <button class="car-btn">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-card-img">
+          <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80" alt="Range Rover"/>
+          <div class="car-badge">New 2025</div>
+        </div>
+        <div class="car-card-body">
+          <div class="car-tag">Luxury SUV</div>
+          <div class="car-name">Range Rover SV</div>
+          <div class="car-desc">The pinnacle of British luxury. Commanding presence, supreme comfort, iconic capability.</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="spec-val">530</span><span class="spec-key">BHP</span></div>
+            <div class="car-spec"><span class="spec-val">5.1s</span><span class="spec-key">0-100 km/h</span></div>
+            <div class="car-spec"><span class="spec-val">250</span><span class="spec-key">km/h Top</span></div>
+          </div>
+          <div class="car-foot">
+            <div class="car-price">$178,000</div>
+            <button class="car-btn">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-card-img">
+          <img src="https://images.unsplash.com/photo-1632245889029-e406faaa34cd?w=800&q=80" alt="Aston Martin"/>
+          <div class="car-badge">Rare Find</div>
+        </div>
+        <div class="car-card-body">
+          <div class="car-tag">Grand Tourer</div>
+          <div class="car-name">Aston Martin DB12</div>
+          <div class="car-desc">Britain's most beautiful grand tourer. Twin-turbo V8, hand-crafted interior, timeless design.</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="spec-val">680</span><span class="spec-key">BHP</span></div>
+            <div class="car-spec"><span class="spec-val">3.5s</span><span class="spec-key">0-100 km/h</span></div>
+            <div class="car-spec"><span class="spec-val">325</span><span class="spec-key">km/h Top</span></div>
+          </div>
+          <div class="car-foot">
+            <div class="car-price">$245,000</div>
+            <button class="car-btn">Enquire</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="carousel-nav">
+      <button class="c-btn" id="prevBtn" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="c-btn" id="nextBtn" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<div class="brands" id="brands">
+  <div class="brands-hdr reveal">
+    <div class="sec-label" style="justify-content:center">Our Partners</div>
+    <div class="sec-h2" style="text-align:center">Authorized <em>Brands</em></div>
+  </div>
+  <div class="brands-grid reveal d1">
+    <div class="brand-item"><div class="brand-name">Porsche</div></div>
+    <div class="brand-item"><div class="brand-name">Ferrari</div></div>
+    <div class="brand-item"><div class="brand-name">Lamborghini</div></div>
+    <div class="brand-item"><div class="brand-name">Bentley</div></div>
+    <div class="brand-item"><div class="brand-name">Aston Martin</div></div>
+    <div class="brand-item" style="border-right:none"><div class="brand-name">McLaren</div></div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="reveal">
+    <div class="sec-label">Why Choose Apex</div>
+    <div class="sec-h2">Experience The <em>Difference</em></div>
+    <p class="sec-sub">We don't just sell cars — we curate experiences and build lifelong relationships with every client.</p>
+  </div>
+  <div class="why-grid reveal d1">
+    <div class="why-img">
+      <img src="https://images.unsplash.com/photo-1568844293986-8d0400bd4745?w=900&q=80" alt="Showroom"/>
+    </div>
+    <div class="why-features">
+      <div class="why-feat">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"/></svg>
+        </div>
+        <div class="feat-h">Certified Vehicles</div>
+        <div class="feat-p">Every car undergoes a rigorous 150-point inspection by our master technicians before reaching your hands.</div>
+      </div>
+      <div class="why-feat">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"/></svg>
+        </div>
+        <div class="feat-h">Flexible Finance</div>
+        <div class="feat-p">Tailored financing solutions with competitive rates. 0% APR options available on selected models.</div>
+      </div>
+      <div class="why-feat">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" stroke="currentColor"/></svg>
+        </div>
+        <div class="feat-h">Trade-In Welcome</div>
+        <div class="feat-p">Get a fair, transparent valuation for your current vehicle. We accept all makes and models.</div>
+      </div>
+      <div class="why-feat">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke="currentColor"/></svg>
+        </div>
+        <div class="feat-h">White Glove Delivery</div>
+        <div class="feat-p">Complimentary delivery anywhere in the country. Your dream car arrives in pristine condition.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="testi">
+  <div class="reveal">
+    <div class="sec-label">Client Stories</div>
+    <div class="sec-h2">What They <em>Say</em></div>
+  </div>
+  <div class="testi-grid">
+    <div class="t-card reveal">
+      <div class="t-quote">"</div>
+      <p class="t-text">Apex Motors made buying my Porsche 911 an absolute pleasure. The team's knowledge and professionalism is unmatched. I drove away feeling like royalty.</p>
+      <div class="t-author">
+        <img class="t-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="James H."/>
+        <div>
+          <div class="t-name">James Harrison</div>
+          <div class="t-role">Porsche 911 GT3 Owner</div>
+        </div>
+      </div>
+    </div>
+    <div class="t-card reveal d1">
+      <div class="t-quote">"</div>
+      <p class="t-text">I've bought cars from dealers worldwide, but Apex stands apart. Transparent pricing, zero pressure, and a seamless finance process. Exceptional from start to finish.</p>
+      <div class="t-author">
+        <img class="t-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah M."/>
+        <div>
+          <div class="t-name">Sarah Mitchell</div>
+          <div class="t-role">Ferrari Roma Owner</div>
+        </div>
+      </div>
+    </div>
+    <div class="t-card reveal d2">
+      <div class="t-quote">"</div>
+      <p class="t-text">The white-glove delivery experience was extraordinary. My Lamborghini arrived covered in a silk cloth with a personalised letter. This is how luxury should feel.</p>
+      <div class="t-author">
+        <img class="t-avatar" src="https://randomuser.me/api/portraits/men/68.jpg" alt="David K."/>
+        <div>
+          <div class="t-name">David Karimov</div>
+          <div class="t-role">Lamborghini Huracan Owner</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWROOM CTA -->
+<div class="showroom-cta">
+  <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?w=1600&q=80" alt="Showroom"/>
+  <div class="showroom-cta-inner reveal">
+    <div class="sec-label" style="justify-content:center">Visit Us Today</div>
+    <h2>Step Into Our <em>Showroom</em></h2>
+    <p>Experience our handpicked collection in person. Our specialists are ready to find your perfect vehicle and guide you through every step of the journey.</p>
+    <div class="cta-btns">
+      <a href="#contact" class="btn-red">Book an Appointment</a>
+      <a href="#featured" class="btn-outline">Browse Online</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="reveal">
+    <div class="sec-label">Get In Touch</div>
+    <div class="sec-h2">Book A <em>Test Drive</em></div>
+    <p class="sec-sub">Ready to experience your next vehicle? Fill in the form and our team will reach out within 2 hours.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal d1">
+      <div class="c-info-item">
+        <div class="c-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="currentColor"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="c-label">Showroom</div>
+          <div class="c-val">14 Apex Drive, Motorway Park<br>Dubai, United Arab Emirates</div>
+        </div>
+      </div>
+      <div class="c-info-item">
+        <div class="c-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="c-label">Phone</div>
+          <div class="c-val">+971 4 800 APEX<br>+971 50 123 4567</div>
+        </div>
+      </div>
+      <div class="c-info-item">
+        <div class="c-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="c-label">Email</div>
+          <div class="c-val">sales@apexmotors.com<br>enquiries@apexmotors.com</div>
+        </div>
+      </div>
+      <div class="c-info-item">
+        <div class="c-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="c-label">Hours</div>
+          <div class="c-val">Mon – Sat: 9:00 AM – 8:00 PM<br>Sunday: 11:00 AM – 6:00 PM</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal d2">
+      <div class="frow">
+        <div class="fg"><label>First Name</label><input type="text" placeholder="John"/></div>
+        <div class="fg"><label>Last Name</label><input type="text" placeholder="Doe"/></div>
+      </div>
+      <div class="fg"><label>Email Address</label><input type="email" placeholder="you@example.com"/></div>
+      <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+971 50 000 0000"/></div>
+      <div class="fg">
+        <label>Vehicle of Interest</label>
+        <select>
+          <option>Select a Vehicle</option>
+          <option>Porsche 911 GT3</option>
+          <option>Ferrari Roma Spider</option>
+          <option>Lamborghini Huracan</option>
+          <option>BMW M5 Competition</option>
+          <option>Range Rover SV</option>
+          <option>Aston Martin DB12</option>
+          <option>Other / Not Sure Yet</option>
+        </select>
+      </div>
+      <div class="fg"><label>Message</label><textarea placeholder="Tell us how we can help..."></textarea></div>
+      <button class="btn-red" id="submitBtn" onclick="handleSubmit()" style="width:100%;text-align:center;padding:16px">Send Enquiry</button>
+      <div id="formMsg" style="display:none;margin-top:12px;color:#4caf50;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600">Your enquiry has been sent. We will contact you shortly.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" style="font-size:1.8rem">APEX<span>.</span></a>
+      <p>Curating the world's finest automobiles for discerning clients since 1998. Your journey to extraordinary begins here.</p>
+      <div class="footer-social">
+        <a href="#" class="soc-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor"/></svg>
+        </a>
+        <a href="#" class="soc-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor"/></svg>
+        </a>
+        <a href="#" class="soc-btn" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z" stroke="currentColor"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="currentColor"/></svg>
+        </a>
+        <a href="#" class="soc-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor"/><rect x="2" y="9" width="4" height="12" stroke="currentColor"/><circle cx="4" cy="4" r="2" stroke="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Inventory</h5>
+      <ul>
+        <li><a href="#">Sports Cars</a></li>
+        <li><a href="#">Luxury Sedans</a></li>
+        <li><a href="#">SUVs & 4x4</a></li>
+        <li><a href="#">Grand Tourers</a></li>
+        <li><a href="#">Hypercars</a></li>
+        <li><a href="#">Pre-Owned</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#">Finance & Leasing</a></li>
+        <li><a href="#">Trade-In</a></li>
+        <li><a href="#">Insurance</a></li>
+        <li><a href="#">Servicing</a></li>
+        <li><a href="#">Extended Warranty</a></li>
+        <li><a href="#">Delivery</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#">About Apex</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <p>© 2025 Apex Motors. All rights reserved.</p>
+    <span>Driven by Excellence</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
